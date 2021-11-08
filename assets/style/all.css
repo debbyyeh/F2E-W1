@@ -16869,7 +16869,7 @@ body input {
   height: 100%;
   top: 0;
   border-radius: 10px;
-  background-color: rgba(40, 58, 44, 0.6);
+  background-color: rgba(40, 58, 44, 0.5);
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
@@ -16881,8 +16881,8 @@ body input {
 
 .click-btn p {
   color: rgba(40, 58, 44, 0.6);
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.5s;
@@ -16893,19 +16893,11 @@ body input {
 .click-btn p:hover {
   width: 80px;
   height: 80px;
-  border: 1px solid white;
+  border: 2px solid white;
+  outline: 1px dashed #283a2c;
+  outline-offset: -5px;
   background-color: white;
   color: #283a2c;
-}
-
-.click-btn p:hover::after {
-  content: "";
-  width: 70px;
-  height: 70px;
-  display: block;
-  border: 1px dashed #283a2c;
-  border-radius: 50%;
-  z-index: 10;
 }
 
 /*# sourceMappingURL=all.css.map */
