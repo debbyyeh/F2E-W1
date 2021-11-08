@@ -16722,7 +16722,7 @@ table {
 }
 
 body {
-  font-family: "Noto Sans", "Lora", "Tajawal", sans-serif, serif !important;
+  font-family: "Lora", "Noto Sans", "Tajawal", sans-serif !important;
 }
 
 body *,
@@ -16754,6 +16754,10 @@ body input {
   height: 742px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.title {
+  font-family: "Lora";
 }
 
 .text-l {
@@ -16805,6 +16809,9 @@ body input {
   padding: 20px 0px;
   border: 1px solid white;
   background: transparent;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .search-go:hover {
@@ -16830,34 +16837,75 @@ body input {
   border: 1px solid #daddc6;
   background: #daddc6;
   color: black;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.tag-hover:hover {
+.tag {
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.tag:hover {
+  text-shadow: #283a2c 0.1em;
   font-weight: bold;
   background-color: #daddc6;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
 }
 
-.img-hover:hover::after {
-  content: "";
+.location-box {
+  overflow: hidden;
+}
+
+.click-card {
+  position: relative;
+}
+
+.click-btn {
+  opacity: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
   top: 0;
-  background-color: rgba(40, 58, 44, 0.2);
-  position: absolute;
   border-radius: 10px;
+  background-color: rgba(40, 58, 44, 0.6);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
-.pic-click {
-  color: #283a2c;
+.click-btn:hover {
+  opacity: 1;
+}
+
+.click-btn p {
+  color: rgba(40, 58, 44, 0.6);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.click-btn p:hover {
   width: 80px;
   height: 80px;
   border: 1px solid white;
+  background-color: white;
+  color: #283a2c;
+}
+
+.click-btn p:hover::after {
+  content: "";
+  width: 70px;
+  height: 70px;
+  display: block;
+  border: 1px dashed #283a2c;
   border-radius: 50%;
-  background: white;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=all.css.map */
