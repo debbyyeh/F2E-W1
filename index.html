@@ -23,21 +23,41 @@
 
 <body>
   <div class="header">
-    <div class="banner d-flex justify-content-center align-items-center">
+    <div class="banner d-flex-center">
       <div class="container px-0">
         <h1 class="title text-l text-center text-white mb-15">Plan your dream trip in Taiwan!</h1>
-        <div class="d-flex align-items-center w-80 mx-auto">
-          <!-- <span class="material-icons-outlined">
-                search
-              </span> -->
-          <input type="text" class="flex-grow-1 border-x text-m search-input ps-13" placeholder="你想去哪兒?">
-          <button type="button" class="text-white text-m border-x search-go mx-3">GO</button>
+        <div class="selectbox d-flex align-items-center w-80 mx-auto">
+          <input type="text" name="" id="selectInput" list="datalistOptions" placeholder="你想去哪兒?"
+            class="flex-grow-1 border-x text-m search-input ps-13">
+          <datalist id="datalistOptions">
+            <option vlaue="台北市">台北市</option>
+            <option vlaue="新北市">新北市</option>
+            <option vlaue="基隆市">基隆市</option>
+            <option vlaue="宜蘭縣">宜蘭縣</option>
+            <option vlaue="花蓮縣">花蓮縣</option>
+            <option vlaue="台東縣">台東縣</option>
+            <option value="屏東縣">屏東縣</option>
+            <option value="高雄市">高雄市</option>
+            <option value="台南市">台南市</option>
+            <option value="嘉義縣">嘉義縣</option>
+            <option value="嘉義市">嘉義市</option>
+            <option value="雲林縣">雲林縣</option>
+            <option value="南投縣">南投縣</option>
+            <option value="彰化縣">彰化縣</option>
+            <option value="高雄市">高雄市</option>
+            <option value="台中市">台中市</option>
+            <option value="苗栗縣">苗栗縣</option>
+            <option value="新竹縣">新竹縣</option>
+            <option value="新竹市">新竹市</option>
+            <option value="桃園縣">桃園縣</option>
+          </datalist>
+          <button type="button" class="text-white text-m border-x search-go mx-3" id="gobtn">GO</button>
           <button type="button" class="text-m border-x search-more">搜尋更多</button>
         </div>
       </div>
     </div>
     <div class="container px-0 mt-15 mb-15">
-      <ul class="d-flex justify-content-center align-items-center">
+      <ul class="d-flex-center">
         <li class="mx-3">
           <a href="" class="tag text-m text-center text-secondary border-dot width-s py-4">All</a>
         </li>
@@ -56,158 +76,37 @@
 
 
   <div class="container px-0">
-    <div class="row">
-        <div class="location-box col-4 mb-15">
+    <ul class="row" id="list-result">
+        <li class="location-box col-4 mb-15">
             <div class="click-card mb-3">
-                <a href="" class="img-hover ">
+                <a href="" class="img-hover">
                     <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
                     <div class="click-btn d-flex justify-content-center align-items-center">
                         <p class="d-flex justify-content-center align-items-center">Click</p>
                     </div>
                 </a>
             </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
+            <div class="singleLine">
+                <p class="name mb-3">name</p>
+                <p class="openTime mb-5">open time</p>
+            </div>
+
             <div class="d-flex justify-content-between">
                 <div class="d-flex align-items-center">
                     <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
+                    <p class="city">City</p>
                 </div>
                 <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
             </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-        <div class="col-4 mb-15">
-            <div class="mb-3 position-relative">
-                <a href="" class="img-hover">
-                    <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
-                </a>
-            </div>
-            <p class="mb-3">name</p>
-            <p class="mb-5">open time</p>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/images/location.svg" alt="location">
-                    <p>city</p>
-                </div>
-                <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
-            </div>
-        </div>
-    </div>
+
+        </li>
+    </ul>
 </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
