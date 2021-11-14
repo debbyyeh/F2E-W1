@@ -23,41 +23,64 @@
 
 <body>
   <div class="header">
-    <div class="banner d-flex-center">
-      <div class="container px-0">
+    <div class="banner d-flex-center position-relative mb-15">
+      <div class="container">
+        <a href="index.html"><img src="./assets/images/LOGO 6.svg" alt="logo" class="logo position-logo"></a>
         <h1 class="title text-l text-center text-white mb-15">Plan your dream trip in Taiwan!</h1>
-        <div class="selectbox d-flex align-items-center w-80 mx-auto">
+        <div class="search flex-wrap d-flex align-items-center mx-auto">
           <input type="text" name="" id="selectInput" list="datalistOptions" placeholder="你想去哪兒?"
             class="flex-grow-1 border-x text-m search-input ps-13">
-          <datalist id="datalistOptions">
-            <option vlaue="台北市">台北市</option>
-            <option vlaue="新北市">新北市</option>
-            <option vlaue="基隆市">基隆市</option>
-            <option vlaue="宜蘭縣">宜蘭縣</option>
-            <option vlaue="花蓮縣">花蓮縣</option>
-            <option vlaue="台東縣">台東縣</option>
-            <option value="屏東縣">屏東縣</option>
-            <option value="高雄市">高雄市</option>
-            <option value="台南市">台南市</option>
-            <option value="嘉義縣">嘉義縣</option>
-            <option value="嘉義市">嘉義市</option>
-            <option value="雲林縣">雲林縣</option>
-            <option value="南投縣">南投縣</option>
-            <option value="彰化縣">彰化縣</option>
-            <option value="高雄市">高雄市</option>
-            <option value="台中市">台中市</option>
-            <option value="苗栗縣">苗栗縣</option>
-            <option value="新竹縣">新竹縣</option>
-            <option value="新竹市">新竹市</option>
-            <option value="桃園縣">桃園縣</option>
-          </datalist>
+          <!-- <ul id="selectOptions">
+            <li>Popular destinations</li>
+            <li data-value="Taipei">臺北市</li>
+            <li data-value="Tainan">臺南市</li>
+            <li data-value="YilanCounty">宜蘭縣</li>
+            <li data-value="Taichung">臺中市</li>
+          </ul> -->
           <button type="button" class="text-white text-m border-x search-go mx-3" id="gobtn">GO</button>
           <button type="button" class="text-m border-x search-more">搜尋更多</button>
         </div>
       </div>
     </div>
-    <div class="container px-0 mt-15 mb-15">
-      <ul class="d-flex-center">
+
+    <!-- 選擇地區 -->
+    <div class="search-show search-more-info">
+      <div class="d-md-flex">
+        <p class="location-area me-md-7 mb-9">地區
+        </p>
+        <div class="location-flex mb-md-0 mb-9">
+          <div class="input-group-label">
+            <input name="area" id="north" type="radio" class="d-none">
+            <label for="north">北部</label>
+          </div>
+          <div class="input-group-label">
+            <input name="area" id="mid" type="radio" class="d-none">
+            <label for="mid">中部</label>
+          </div>
+          <div class="input-group-label">
+            <input name="area" id="south" type="radio" class="d-none">
+            <label for="south">南部</label>
+          </div>
+          <div class="input-group-label">
+            <input name="area" id="east" type="radio" class="d-none">
+            <label for="east">東部</label>
+          </div>
+          <div class="input-group-label">
+            <input name="area" id="islands" type="radio" class="d-none">
+            <label for="islands">離島</label>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-flex">
+        <p class="location-area me-md-7 mb-9">縣市</p>
+        <div id="city" class="location-flex input-group-city">
+          <p class="location-not">尚未選擇地區</p>
+        </div>
+      </div>
+    </div>
+    <!--category tag  -->
+    <div class=" container mb-15">
+      <ul class="d-flex justify-content-center flex-lg-wrap overflow-x">
         <li class="mx-3">
           <a href="" class="tag text-m text-center text-secondary border-dot width-s py-4">All</a>
         </li>
@@ -75,11 +98,11 @@
   </div>
 
 
-  <div class="container px-0">
+  <div class="container">
     <ul class="row" id="list-result">
-        <li class="location-box col-4 mb-15">
+        <li class="location-box col-md-4 col-12 mb-md-15 mb-11">
             <div class="click-card mb-3">
-                <a href="" class="img-hover">
+                <a href="" class="img img-hover">
                     <img src="./assets/images/pic.png" alt="" class="object-cover border-s">
                     <div class="click-btn d-flex justify-content-center align-items-center">
                         <p class="d-flex justify-content-center align-items-center">Click</p>
@@ -90,7 +113,6 @@
                 <p class="name mb-3">name</p>
                 <p class="openTime mb-5">open time</p>
             </div>
-
             <div class="d-flex justify-content-between">
                 <div class="d-flex align-items-center">
                     <img src="./assets/images/location.svg" alt="location">
@@ -98,10 +120,16 @@
                 </div>
                 <a href="" class="bg-tagBack text-center text-primary border-m width-s py-3">#Activities</a>
             </div>
-
         </li>
     </ul>
 </div>
+    <footer>
+      <div class="bg-secondary">
+        <div class="container text-white py-3 text-center">
+          <p>copyright ©兩耳一草. all rights reserved</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>

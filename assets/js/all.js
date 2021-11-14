@@ -1,6 +1,16 @@
 "use strict";
 
-// 縣市區篩選欄位連動
+// jquery 下拉式選單
+$(document).ready(function () {
+  $('.search-more').click(function (e) {
+    e.preventDefault();
+    $('body').toggleClass('search-height-show');
+  });
+  $('.input-group-label').click(function () {
+    $(this).toggleClass('.active');
+  });
+}); // 縣市區篩選欄位連動
+
 var area_data = {
   "north": {
     0: {
@@ -136,7 +146,7 @@ areaSelect.forEach(function (e) {
     var newCity = '';
 
     for (var i = 0; i < cityLen; i++) {
-      newCity += "<div class=\"input-group\"><input name=\"city\" id=\"".concat(citypart[i].cityEN, "\" type=\"radio\"><label for=\"").concat(citypart[i].cityEN, "\">").concat(citypart[i].cityCH, "</label></div>");
+      newCity += "<div class=\"input-group-city\"><input name=\"city\" id=\"".concat(citypart[i].cityEN, "\" type=\"radio\"><label for=\"").concat(citypart[i].cityEN, "\">").concat(citypart[i].cityCH, "</label></div>");
     }
 
     city.innerHTML = newCity;
