@@ -23,63 +23,81 @@
 
 <body>
   <div class="header">
-    <div class="banner d-flex-center position-relative mb-15">
+    <div class="banner d-flex-center position-relative">
       <div class="container">
         <a href="index.html"><img src="./assets/images/LOGO 6.svg" alt="logo" class="logo position-logo"></a>
         <h1 class="title text-l text-center text-white mb-15">Plan your dream trip in Taiwan!</h1>
-        <div class="search flex-wrap d-flex align-items-center mx-auto">
-          <input type="text" name="" id="selectInput" list="datalistOptions" placeholder="你想去哪兒?"
-            class="flex-grow-1 border-x text-m search-input ps-13">
-          <!-- <ul id="selectOptions">
-            <li>Popular destinations</li>
-            <li data-value="Taipei">臺北市</li>
-            <li data-value="Tainan">臺南市</li>
-            <li data-value="YilanCounty">宜蘭縣</li>
-            <li data-value="Taichung">臺中市</li>
-          </ul> -->
+        <div class="search">
+          <div class="destination">
+            <input type="text" name="whereToGo" id="selectInput" placeholder="你想去哪兒?"
+              class="search-input border-x text-m ps-13" list="dataOptionList">
+            <ul class="whereInfo whereTo-show" id="selectOptions">
+              <p class="mb-6">Popular destinations</p>
+              <li class="d-flex align-items-center mb-9">
+                <img src="./assets/images/location_list.svg" alt="map" class="me-5 round-map">
+                <a href="">臺北市</a>
+              </li>
+              <li class="d-flex align-items-center mb-9">
+                <img src="./assets/images/location_list.svg" alt="map" class="me-5 round-map">
+                <a href="">臺南市</a>
+              </li>
+              <li class="d-flex align-items-center mb-9">
+                <img src="./assets/images/location_list.svg" alt="map" class="me-5 round-map">
+                <a href="">高雄市</a>
+              </li>
+              <li class="d-flex align-items-center mb-9">
+                <img src="./assets/images/location_list.svg" alt="map" class="me-5 round-map">
+                <a href="">台中市</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img src="./assets/images/location_list.svg" alt="map" class="me-5 round-map">
+                <a href="">花蓮市</a>
+              </li>
+            </ul>
+          </div>
           <button type="button" class="text-white text-m border-x search-go mx-3" id="gobtn">GO</button>
           <button type="button" class="text-m border-x search-more">搜尋更多</button>
-        </div>
-      </div>
-    </div>
 
-    <!-- 選擇地區 -->
-    <div class="search-show search-more-info">
-      <div class="d-md-flex">
-        <p class="location-area me-md-7 mb-9">地區
-        </p>
-        <div class="location-flex mb-md-0 mb-9">
-          <div class="input-group-label">
-            <input name="area" id="north" type="radio" class="d-none">
-            <label for="north">北部</label>
-          </div>
-          <div class="input-group-label">
-            <input name="area" id="mid" type="radio" class="d-none">
-            <label for="mid">中部</label>
-          </div>
-          <div class="input-group-label">
-            <input name="area" id="south" type="radio" class="d-none">
-            <label for="south">南部</label>
-          </div>
-          <div class="input-group-label">
-            <input name="area" id="east" type="radio" class="d-none">
-            <label for="east">東部</label>
-          </div>
-          <div class="input-group-label">
-            <input name="area" id="islands" type="radio" class="d-none">
-            <label for="islands">離島</label>
-          </div>
         </div>
-      </div>
-      <div class="d-md-flex">
-        <p class="location-area me-md-7 mb-9">縣市</p>
-        <div id="city" class="location-flex input-group-city">
-          <p class="location-not">尚未選擇地區</p>
+        <!-- 搜尋更多 -->
+        <div class="search-show search-more-info">
+          <div class="d-md-flex">
+            <p class="location-area me-md-7 mb-9">地區
+            </p>
+            <div class="location-flex mb-md-0 mb-9">
+              <div class="input-group-label">
+                <input name="area" id="north" type="radio" class="d-none">
+                <label for="north">北部</label>
+              </div>
+              <div class="input-group-label">
+                <input name="area" id="mid" type="radio" class="d-none">
+                <label for="mid">中部</label>
+              </div>
+              <div class="input-group-label">
+                <input name="area" id="south" type="radio" class="d-none">
+                <label for="south">南部</label>
+              </div>
+              <div class="input-group-label">
+                <input name="area" id="east" type="radio" class="d-none">
+                <label for="east">東部</label>
+              </div>
+              <div class="input-group-label">
+                <input name="area" id="islands" type="radio" class="d-none">
+                <label for="islands">離島</label>
+              </div>
+            </div>
+          </div>
+          <div class="d-md-flex">
+            <p class="location-area me-md-7 mb-9">縣市</p>
+            <div id="city" class="location-flex input-group-city">
+              <p class="location-not">尚未選擇地區</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!--category tag  -->
-    <div class=" container mb-15">
+    <div class=" container mt-10 mb-15">
       <ul class="d-flex justify-content-center flex-lg-wrap overflow-x">
         <li class="mx-3">
           <a href="" class="tag text-m text-center text-secondary border-dot width-s py-4">All</a>

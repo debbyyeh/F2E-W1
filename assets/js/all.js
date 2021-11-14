@@ -6,6 +6,9 @@ $(document).ready(function () {
     e.preventDefault();
     $('body').toggleClass('search-height-show');
   });
+  $('.search-input').click(function () {
+    $('body').toggleClass('whereHeight-show');
+  });
   $('.input-group-label').click(function () {
     $(this).toggleClass('.active');
   });
