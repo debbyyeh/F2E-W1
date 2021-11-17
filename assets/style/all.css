@@ -16751,7 +16751,7 @@ body input {
 .banner {
   background-image: url(../images/banner.png);
   height: 742px;
-  background-position: 50% bottom;
+  background-position: 48% bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -16836,52 +16836,41 @@ body input {
   left: 50px;
 }
 
-.search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1%;
-          flex: 0 0 1%;
-  max-width: 900px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
+.flex-width-l {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
-@media (max-width: 768px) {
-  .search {
-    max-width: 576px;
+@media (max-width: 992px) {
+  .flex-width-l {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 30px;
   }
 }
 
-@media (max-width: 576px) {
-  .search {
-    max-width: 300px;
-  }
+.flex-width-s {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .search-input {
+  width: 100%;
+  display: block;
   background: url(../images/search.svg) 2%/24px no-repeat;
   border: 1px solid #283a2c;
   -webkit-box-shadow: 0px 2px 0px #283a2c;
           box-shadow: 0px 2px 0px #283a2c;
   background-color: white;
-  width: 600px;
   padding: 20px 0px;
-}
-
-@media (max-width: 768px) {
-  .search-input {
-    width: 100%;
-  }
 }
 
 .search-go {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   padding: 20px 0px;
   border: 1px solid white;
@@ -16902,9 +16891,7 @@ body input {
 }
 
 .search-more {
-  -webkit-box-flex: 1.5;
-      -ms-flex-positive: 1.5;
-          flex-grow: 1.5;
+  width: 100%;
   text-align: center;
   padding: 20px 0px;
   border: 1px solid #283a2c;
@@ -17084,17 +17071,20 @@ body input {
   overflow: hidden;
   margin: 0 auto;
   position: absolute;
-  max-width: 100%;
   z-index: 999;
 }
 
 .search-height-show .search-show {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 12px;
   max-height: calc(100vh - 150px);
   border: 1px solid #283a2c;
   border-radius: 8px;
   background-color: white;
-  margin-top: 12px;
   padding: 60px;
+  overflow-y: auto;
 }
 
 @media (max-width: 767px) {
@@ -17111,6 +17101,8 @@ body input {
 
 .whereHeight-show .whereInfo {
   max-height: calc(100vh - 150px);
+  position: absolute;
+  width: inherit;
   border: 1px solid #283a2c;
   border-radius: 10px;
   background-color: white;
@@ -17122,8 +17114,10 @@ body input {
   max-height: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
   z-index: 4;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
 }
 
 /*# sourceMappingURL=all.css.map */
